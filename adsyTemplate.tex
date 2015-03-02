@@ -1,0 +1,45 @@
+%*************************************************
+%
+%    *             **                     
+%   * *       *   *    *  ***   *   ****  
+%  *   *      *   *       *  *     *      
+%  *****   ****  ***   *  *  *  *   ***   
+%  *   *  *   *   *    *  *  *  *      *  
+%  *   *   ****   *    *  *  *  *  ****   
+%                                         
+%  
+%   ****         ***                                   *     ***   
+%  *      *  *  *   *   **   ***   *  *  ****         * *   *   *  
+%   ***   *  *  *      *    *   *  *  *  *   *       *   *  *      
+%      *   ***  *  **  *    *   *  *  *  *   *       *****  *  **  
+%      *     *  *   *  *    *   *  *  *  ****        *   *  *   *  
+%  ****      *   ****  *     ***    ***  *           *   *   ****  
+%         ***                            *   
+%
+%*************************************************
+
+
+\usepackage{hyperref}
+\usepackage[ngerman,british]{babel}
+
+\usepackage{fancyhdr}
+
+%\usepackage{tabluarx}
+
+\usepackage{fontspec}
+\setromanfont{TheSansOffice}
+
+\renewcommand{\maketitle} {
+    \begin{titlepage}
+	\vspace*{8.1cm}
+
+	\@subtitle
+
+	\vspace{0.3cm}
+
+	\Large \textbf{ \@title }
+	\vfill
+    \end{titlepage}
+}
+
+
