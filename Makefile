@@ -1,7 +1,7 @@
 
 FILENAME := example
 REDIRECT := 1>  /dev/null
-JOB      := exampledoc
+JOB      := example
 COMPILER := xelatex
 
 
