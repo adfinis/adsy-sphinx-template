@@ -23,6 +23,7 @@
 \usepackage[ngerman,british]{babel}
 
 \usepackage{fancyhdr}
+\usepackage{graphicx}
 
 %\usepackage{tabluarx}
 
@@ -36,10 +37,17 @@
 	\@subtitle
 
 	\vspace{0.3cm}
-
-	\Large \textbf{ \@title }
+	\Large 
+	\textbf{\@title }
 	\vfill
     \end{titlepage}
 }
 
+\usepackage{background}
 
+\SetBgContents{\includegraphics[height=7cm]{logo.png}}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgPosition{current page.north east}
+\SetBgHshift{-1.5cm}
+\SetBgVshift{-4cm}
