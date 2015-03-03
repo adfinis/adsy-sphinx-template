@@ -1,20 +1,20 @@
 %*************************************************
 %
-%    *             **                     
-%   * *       *   *    *  ***   *   ****  
-%  *   *      *   *       *  *     *      
-%  *****   ****  ***   *  *  *  *   ***   
-%  *   *  *   *   *    *  *  *  *      *  
-%  *   *   ****   *    *  *  *  *  ****   
-%                                         
-%  
-%   ****         ***                                   *     ***   
-%  *      *  *  *   *   **   ***   *  *  ****         * *   *   *  
-%   ***   *  *  *      *    *   *  *  *  *   *       *   *  *      
-%      *   ***  *  **  *    *   *  *  *  *   *       *****  *  **  
-%      *     *  *   *  *    *   *  *  *  ****        *   *  *   *  
-%  ****      *   ****  *     ***    ***  *           *   *   ****  
-%         ***                            *   
+%    *             **
+%   * *       *   *    *  ***   *   ****
+%  *   *      *   *       *  *     *
+%  *****   ****  ***   *  *  *  *   ***
+%  *   *  *   *   *    *  *  *  *      *
+%  *   *   ****   *    *  *  *  *  ****
+%
+%
+%   ****         ***                                   *     ***
+%  *      *  *  *   *   **   ***   *  *  ****         * *   *   *
+%   ***   *  *  *      *    *   *  *  *  *   *       *   *  *
+%      *   ***  *  **  *    *   *  *  *  *   *       *****  *  **
+%      *     *  *   *  *    *   *  *  *  ****        *   *  *   *
+%  ****      *   ****  *     ***    ***  *           *   *   ****
+%         ***                            *
 %
 %*************************************************
 
@@ -22,23 +22,34 @@
 \usepackage{hyperref}
 \usepackage[ngerman,british]{babel}
 
-\usepackage{fancyhdr}
+\usepackage{scrpage2}
 \usepackage{graphicx}
 
-%\usepackage{tabluarx}
+\usepackage{tabularx}
+
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
 
 \usepackage{fontspec}
 \setromanfont{TheSansOffice}
 
-\renewcommand{\maketitle} {
-    \begin{titlepage}
+\renewcommand{\maketitle}{\begin{titlepage}
 	\vspace*{8.1cm}
+	{\fontsize{8pt}{1em} \selectfont \subtitle{}}
+	\vspace{0.3cm}
 
-	\@subtitle
+	{\fontsize{14.4pt}{1em} \selectfont \textbf{\title{}}}
 
 	\vspace{0.3cm}
-	\Large 
-	\textbf{\@title }
+
+	\bgroup{}
+	\fontsize{9pt}{1em} \selectfont
+	\begin{tabular}{>{\hspace{-0.5pc}}l  l}
+		\textbf{Autor/en:} & \authors{} \\
+		\textbf{Version:}  & \versionnumber{} | \documentstate{} \\
+		\textbf{Datum:}    & \versiondate{} | \textcopyright{} {\fontsize{7pt} \selectfont Adfinis SyGroup AG} \\
+	\end{tabular}
+	\egroup{}
 	\vfill
     \end{titlepage}
 }
