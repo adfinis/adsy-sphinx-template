@@ -1,27 +1,26 @@
-
-
 % For Building a book
 % \documentclass[twoside,DIV12,BCOR0.5cm,openright]{adsyDoc}
 
 % For Building a web version
 \documentclass[oneside,DIV12,BCOR0.5cm]{adsyDoc}
 
-
-\renewcommand{\title}{Example Document for the Adfinis SyGroup Latex Template}
-\renewcommand{\subtitle}{Adsy Latex Project}
-\providecommand{\authors}{Sven Osterwalder \& Stefan Heinemann}
-\providecommand{\versionnumber}{1.0}
-\providecommand{\versiondate}{\today}
-\providecommand{\documentstate}{Entwurf}
-
 \hypersetup{pdfauthor={\authors{}},
 	pdftitle={\title{}}
 }
 
+\usepackage{makeidx}
+\makeindex{}
+
+\usepackage{blindtext}
+
 \begin{document}
 
-\maketitle
+\maketitle{}
+%\include{lead/versions}
 
-Hallo Welt
+\tableofcontents{}
+
+% Chapters
+\include{chapters/chapter1}
 
 \end{document}

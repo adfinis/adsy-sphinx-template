@@ -1,0 +1,32 @@
+% Formatting of default titles (chapter, section and so on)
+
+% Font sizes
+% Syntax: \fontsize{size}{baselineskip}
+
+% Chapter
+\titleformat{\chapter}[display]
+	{\normalfont\fontsize{16pt}{8.50mm}\sffamily\bfseries}
+	{\thechapter\hspace{14.99mm}#1}
+	{1em}
+	{}
+
+% Section
+\titleformat{\section}[display]
+	{\normalfont\fontsize{13pt}{6.40mm}\sffamily\bfseries}
+	{\thesection\hspace{11.70mm}#1}
+	{1em}
+	{}
+
+% Subsection
+\titleformat{\subsection}[display]
+	{\normalfont\fontsize{11pt}{5.29mm}\sffamily\bfseries}
+	{\thesubsection\hspace{9.45mm}#1}
+	{1em}
+	{}
+
+% Subsubsection
+\titleformat{\subsubsection}[display]
+	{\normalfont\fontsize{11pt}{5.29mm}\sffamily\bfseries}
+	{\thesubsubsection\hspace{6.10mm}#1}
+	{1em}
+	{}

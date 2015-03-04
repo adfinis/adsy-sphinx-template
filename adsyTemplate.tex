@@ -20,16 +20,19 @@
 
 
 \usepackage{hyperref}
-\usepackage[ngerman,british]{babel}
-
 \usepackage{fancyhdr}
 \usepackage{graphicx}
-
+\usepackage{setspace}
 \usepackage{tabularx}
-
 \usepackage[top=2cm, bottom=2.8cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[explicit]{titlesec}
 
-% Date format 
+% Languages
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+\setotherlanguage[variant=uk]{english}
+
+% Date format
 \usepackage[ddmmyyyy]{datetime}
 \renewcommand{\dateseparator}{.}
 
@@ -37,61 +40,21 @@
 \usepackage{fontspec}
 \setromanfont{TheSansOffice}
 
-% Title Page
-\renewcommand{\maketitle}{\begin{titlepage}
-	\vspace*{8.1cm}
-	{\fontsize{8pt}{1em} \selectfont \subtitle{}}
-	\vspace{0.3cm}
-
-	{\fontsize{14.4pt}{1em} \selectfont \textbf{\title{}}}
-
-	\vspace{0.3cm}
-
-	\bgroup{}
-	\fontsize{9pt}{1em} \selectfont
-	\begin{tabular}{>{\hspace{-0.5pc}}l  l}
-		\textbf{Autor/en:} & \authors{} \\
-		\textbf{Version:}  & \versionnumber{} | \documentstate{} \\
-		\textbf{Datum:}    & \versiondate{} | \textcopyright{} {\fontsize{7pt}{1em} \selectfont Adfinis SyGroup AG} \\
-	\end{tabular}
-	\egroup{}
-	\vfill
-    \end{titlepage}
+% Set table of context title
+\addto\captionsbritish{%
+  \renewcommand{\contentsname}{Contents}
+}
+\addto\captionsgerman{%
+  \renewcommand{\contentsname}{Inhalt}
 }
 
+% Set numbering to include subsections as well
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
-% The picture on the right
-\usepackage{background}
-\SetBgContents{\includegraphics[height=7cm]{logo.png}}
-\SetBgScale{1}
-\SetBgAngle{0}
-\SetBgPosition{current page.north east}
-\SetBgHshift{-1.5cm}
-\SetBgVshift{-4cm}
-
-
-\usepackage{lastpage}
-
-
-\pagestyle{fancy}
-\fancypagestyle{empty}
-
-\setkomafont{pagefoot}{\normalfont\sffamily}
-
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.4pt}
-
-\newcommand{\LeftFoot}{\fontsize{7pt}{1em}\selectfont
-	\title{} | \subtitle{} \\
-	\textcopyright{} Adfinis SyGroup AG | Version \versionnumber{} | Status \documentstate{}
-}
-\fancyfoot[LO,LE]{\LeftFoot}
-
-
-\cfoot{}
-
-
-\newcommand{\RightFoot}{\fontsize{7pt}{1em} \selectfont
-\thepage{}~/~\pageref{LastPage} \\
-}
-\fancyfoot[RO,RE]{\RightFoot}
+\include{includes/variables}
+\include{includes/titlepage}
+\include{includes/header_footer}
+\include{includes/pagestyles}
+\include{includes/spacings}
+\include{includes/formattings}
