@@ -52,9 +52,113 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-\include{includes/variables}
-\include{includes/titlepage}
-\include{includes/header_footer}
-\include{includes/pagestyles}
-\include{includes/spacings}
-\include{includes/formattings}
+
+% Title Page
+\renewcommand{\maketitle}{\begin{titlepage}
+	\vspace*{8.1cm}
+	{\fontsize{8pt}{1em} \selectfont \subtitle{}}
+
+	\vspace{0.3cm}
+	{\fontsize{14.4pt}{1em} \selectfont \textbf{\title{}}}
+
+	\vspace{0.3cm}
+
+	\bgroup{}
+	\fontsize{9pt}{1em} \selectfont
+	\begin{tabular}{>{\hspace{-0.5pc}}l  l}
+		\textbf{Autor/en:} & \authors{} \\
+		\textbf{Version:}  & \versionnumber{} | \documentstate{} \\
+		\textbf{Datum:}    & \versiondate{} | \textcopyright{} {\fontsize{7pt}{1em} \selectfont Adfinis SyGroup AG} \\
+	\end{tabular}
+	\egroup{}
+	\vfill
+    \end{titlepage}
+}
+
+
+\usepackage{lastpage}
+
+% The picture on the right
+\usepackage{background}
+\SetBgContents{\includegraphics[height=7cm]{logo.png}}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgPosition{current page.north east}
+\SetBgHshift{-1.5cm}
+\SetBgVshift{-4cm}
+
+% Header and footer specific settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\LeftFoot}{\fontsize{7pt}{1em}\selectfont
+	\textbf{\title{}} | \subtitle{} \\
+	\textcopyright{} Adfinis SyGroup AG | Version \versionnumber{} | Status \documentstate{}
+}
+
+\newcommand{\RightFoot}{\fontsize{7pt}{1em} \selectfont
+\thepage{}~/~\pageref{LastPage} \\
+}
+
+
+% Page styles
+
+% Empty gets invoked by maketitle
+\fancypagestyle{empty}{% Clear header and footer
+	\fancyhf{}
+	\fancyfoot[L]{\LeftFoot}
+	\fancyfoot[R]{\RightFoot}
+}
+% All other pages
+\fancypagestyle{plain}{% Clear header and footer
+	\fancyhf{}
+	\fancyfoot[L]{\LeftFoot}
+	\fancyfoot[R]{\RightFoot}
+}
+
+
+% Spacings
+
+% Set default space between chapter heading and text
+% Syntax:
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\chapter}{0pt}{*0}{24.99mm}
+\titlespacing*{\section}{0pt}{10.00mm}{4.99mm}
+\titlespacing*{\subsection}{0pt}{4.99mm}{1.99mm}
+\titlespacing*{\subsubsection}{0pt}{4.99mm}{1.99mm}
+
+
+
+% Formatting of default titles (chapter, section and so on)
+
+% Font sizes
+% Syntax: \fontsize{size}{baselineskip}
+
+% Chapter
+\titleformat{\chapter}[display]
+	{\normalfont\fontsize{16pt}{8.50mm}\sffamily\bfseries}
+	{\thechapter\hspace{14.99mm}#1}
+	{1em}
+	{}
+
+% Section
+\titleformat{\section}[display]
+	{\normalfont\fontsize{13pt}{6.40mm}\sffamily\bfseries}
+	{\thesection\hspace{11.70mm}#1}
+	{1em}
+	{}
+
+% Subsection
+\titleformat{\subsection}[display]
+	{\normalfont\fontsize{11pt}{5.29mm}\sffamily\bfseries}
+	{\thesubsection\hspace{9.45mm}#1}
+	{1em}
+	{}
+
+% Subsubsection
+\titleformat{\subsubsection}[display]
+	{\normalfont\fontsize{11pt}{5.29mm}\sffamily\bfseries}
+	{\thesubsubsection\hspace{6.10mm}#1}
+	{1em}
+	{}
+
