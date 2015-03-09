@@ -80,16 +80,16 @@
 	{\fontsize{8pt}{1em} \selectfont \subtitle{}}
 
 	\vspace{0.3cm}
-	{\fontsize{14.4pt}{1em} \selectfont \textbf{\title{}}}
+	{\fontsize{14.4pt}{1em} \selectfont \textbf{\@title}}
 
 	\vspace{0.3cm}
 
 	\bgroup{}
 	\fontsize{9pt}{1em} \selectfont
 	\begin{tabular}{>{\hspace{-0.5pc}}l  l}
-		\textbf{Autor/en:} & \authors{} \\
-		\textbf{Version:}  & \versionnumber{} | \documentstate{} \\
-		\textbf{Datum:}    & \versiondate{} | \textcopyright{} {\fontsize{7pt}{1em} \selectfont Adfinis SyGroup AG} \\
+		\textbf{Autor/en:} & \@author \\
+		%\textbf{Version:}  & \release{} | \releasename{}
+		\textbf{Datum:}    & \@date | \textcopyright{} {\fontsize{7pt}{1em} \selectfont Adfinis SyGroup AG} \\
 	\end{tabular}
 	\egroup{}
 	\vfill
@@ -114,7 +114,7 @@
 
 \newcommand{\LeftFoot}{\fontsize{7pt}{1em}\selectfont
 	\textbf{\title{}} | \subtitle{} \\
-	\textcopyright{} Adfinis SyGroup AG | Version \versionnumber{} | Status \documentstate{}
+	\textcopyright{} Adfinis SyGroup AG | Version \release{} | Status \releasename{}
 }
 
 \newcommand{\RightFoot}{\fontsize{7pt}{1em} \selectfont
