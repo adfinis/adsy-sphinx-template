@@ -59,7 +59,8 @@
 
 % Font
 \usepackage{fontspec}
-\setromanfont{TheSansOffice}
+\setmainfont{TheSansOffice}
+
 
 % Set table of context title
 \addto\captionsbritish{%
@@ -143,10 +144,9 @@
 % Set default space between chapter heading and text
 % Syntax:
 % \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
-\titlespacing*{\chapter}{0pt}{*0}{24.99mm}
-\titlespacing*{\section}{0pt}{10.00mm}{4.99mm}
+\titlespacing*{\chapter}{0pt}{10.00mm}{2.5cm}
+\titlespacing*{\section}{0pt}{4.99mm}{1.99mm}
 \titlespacing*{\subsection}{0pt}{4.99mm}{1.99mm}
-\titlespacing*{\subsubsection}{0pt}{4.99mm}{1.99mm}
 
 
 
@@ -155,31 +155,24 @@
 % Font sizes
 % Syntax: \fontsize{size}{baselineskip}
 
-% Chapter
-\titleformat{\chapter}[display]
-	{\normalfont\fontsize{16pt}{8.50mm}\sffamily\bfseries}
-	{\thechapter\hspace{14.99mm}#1}
-	{1em}
-	{}
-
 % Section
-\titleformat{\section}[display]
-	{\normalfont\fontsize{13pt}{6.40mm}\sffamily\bfseries}
-	{\thesection\hspace{11.70mm}#1}
+\titleformat{\chapter}[display]
+	{\fontsize{16pt}{6.40mm}}
+	{\textbf{\thechapter}\hspace{11.70mm}\textbf{#1}}
 	{1em}
 	{}
 
 % Subsection
-\titleformat{\subsection}[display]
-	{\normalfont\fontsize{11pt}{5.29mm}\sffamily\bfseries}
-	{\thesubsection\hspace{9.45mm}#1}
+\titleformat{\section}[display]
+	{\normalfont\fontsize{13pt}{5.29mm}}
+	{\textbf{\thesection}\hspace{9.45mm}\textbf{#1}}
 	{1em}
 	{}
 
 % Subsubsection
-\titleformat{\subsubsection}[display]
-	{\normalfont\fontsize{11pt}{5.29mm}\sffamily\bfseries}
-	{\thesubsubsection\hspace{6.10mm}#1}
+\titleformat{\subsection}[display]
+	{\normalfont\fontsize{11pt}{5.29mm}}
+	{\textbf{\thesubsection}\hspace{6.10mm}\textbf{#1}}
 	{1em}
 	{}
 
