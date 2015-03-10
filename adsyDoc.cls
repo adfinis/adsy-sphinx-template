@@ -149,6 +149,9 @@
 \titlespacing*{\subsection}{0pt}{4.99mm}{1.99mm}
 
 
+% Colors, because sphinx uses colors for the headers
+\usepackage{color}
+
 
 % Formatting of default titles (chapter, section and so on)
 
@@ -158,21 +161,21 @@
 % Section
 \titleformat{\chapter}[display]
 	{\fontsize{16pt}{6.40mm}}
-	{\textbf{\thechapter}\hspace{11.70mm}\textbf{#1}}
+	{\color{black}{\textbf{\thechapter}\hspace{11.70mm}\textbf{#1}}}
 	{1em}
 	{}
 
 % Subsection
 \titleformat{\section}[display]
 	{\normalfont\fontsize{13pt}{5.29mm}}
-	{\textbf{\thesection}\hspace{9.45mm}\textbf{#1}}
+	{\color{black}{\textbf{\thesection}\hspace{9.45mm}\textbf{#1}}}
 	{1em}
 	{}
 
 % Subsubsection
 \titleformat{\subsection}[display]
 	{\normalfont\fontsize{11pt}{5.29mm}}
-	{\textbf{\thesubsection}\hspace{6.10mm}\textbf{#1}}
+	{\color{black}{\textbf{\thesubsection}\hspace{6.10mm}\textbf{#1}}}
 	{1em}
 	{}
 
