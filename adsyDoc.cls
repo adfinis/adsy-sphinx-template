@@ -36,7 +36,7 @@
 \ProcessOptions\relax
 
 %% Load book class
-\LoadClass[numbers=noenddot]{scrbook} % report better for pdf 
+\LoadClass[numbers=noenddot]{scrbook} % report better for pdf
 
 
 
@@ -89,7 +89,7 @@
 	\fontsize{9pt}{1em} \selectfont
 	\begin{tabular}{>{\hspace{-0.5pc}}l  l}
 		\textbf{Autor/en:} & \@author \\
-		%\textbf{Version:}  & \release{} | \releasename{}
+		\textbf{Version:}  & \release{} | \releasename{} \\
 		\textbf{Datum:}    & \@date | \textcopyright{} {\fontsize{7pt}{1em} \selectfont Adfinis SyGroup AG} \\
 	\end{tabular}
 	\egroup{}
@@ -102,7 +102,7 @@
 
 % The picture on the right
 \usepackage{background}
-\SetBgContents{\includegraphics[height=7cm]{logo.png}}
+\SetBgContents{\includegraphics[height=7cm]{logo}}
 \SetBgScale{1}
 \SetBgAngle{0}
 \SetBgPosition{current page.north east}
@@ -114,7 +114,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 \newcommand{\LeftFoot}{\fontsize{7pt}{1em}\selectfont
-	\textbf{\title{}} | \subtitle{} \\
+	\textbf{\@title} | \subtitle{} \\
 	\textcopyright{} Adfinis SyGroup AG | Version \release{} | Status \releasename{}
 }
 
