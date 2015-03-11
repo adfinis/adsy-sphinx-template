@@ -31,9 +31,10 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
 \RequirePackage{setspace}
-\RequirePackage{tabularx}
+\RequirePackage{tabulary}
 \RequirePackage[top=2cm, bottom=2.8cm, left=2.5cm, right=2.5cm]{geometry}
 \RequirePackage[explicit]{titlesec}
+\usepackage{color, colortbl}
 
 % Languages
 \RequirePackage{polyglossia}
@@ -168,3 +169,16 @@
 	{\textbf{\thesubsubsection}\hspace{4mm}\textbf{#1}}
 	{1em}
 	{}
+
+
+
+\let\oldtabular\tabulary
+\let\endoldtabular\endtabulary
+
+\definecolor{tablehead}{rgb}{0.729, 0.682, 0.623}
+
+\renewenvironment{tabulary}[1]{\bgroup\oldtabular{\linewidth}{#1}
+	\rowcolor[gray]{.9}
+}%
+{\endoldtabular\egroup}
+
