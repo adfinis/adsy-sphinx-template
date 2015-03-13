@@ -175,9 +175,9 @@
 \let\oldtabular\tabulary
 \let\endoldtabular\endtabulary
 
-\definecolor{tablehead}{rgb}{0.729, 0.682, 0.623}
+\definecolor{tablehead}{rgb}{0.7294117647058823, 0.6823529411764706, 0.6235294117647059}
 
-\renewenvironment{tabulary}[1]{\bgroup\oldtabular{\linewidth}{#1}
+\renewenvironment{tabulary}[2]{\bgroup\oldtabular{#1}{#2}
 	\rowcolor[gray]{.9}
 }%
 {\endoldtabular\egroup}
