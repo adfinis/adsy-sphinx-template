@@ -461,3 +461,13 @@
     \gdef\@chappos{}
   }
 \fi
+
+% Define literal-block environment
+\RequirePackage{float}
+\floatstyle{plaintop}
+\ifx\thechapter\undefined
+  \newfloat{literal-block}{htbp}{loc}[section]
+\else
+  \newfloat{literal-block}{htbp}{loc}[chapter]
+\fi
+\floatname{literal-block}{List}
