@@ -53,9 +53,10 @@ To enable the Ad-Sy LaTeX template, add the following to the `conf.py` file:
 
            \usepackage{adsy}
 
-           \renewcommand{\subtitle}{Etisalat}
 
-       """,
+           \renewcommand{\subtitle}{%s}
+
+       """ % (project)
 
    }
 
