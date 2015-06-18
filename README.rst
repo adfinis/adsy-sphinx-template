@@ -9,8 +9,9 @@ correctly.
 Initializing
 ============
 
-To initialize a new sphinx-doc documentation, just run the
-`sphinx-quickstart` command as usual.
+To initialize a new sphinx-doc documentation, just run the `sphinx-quickstart`
+command as usual. Alternatively, copy the files from the `example` folder into
+the project folder and start customizing the `conf.py` files.
 
 The following examples assume that you have added the
 `adsy-sphinx-template.src` repository either as a submodule or as a regular
