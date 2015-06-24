@@ -59,7 +59,7 @@
 
 % Font
 \usepackage{fontspec}
-\setmainfont{TheSansOffice}
+\setmainfont{TheSansOfficeLF}
 
 
 % Set table of context title
