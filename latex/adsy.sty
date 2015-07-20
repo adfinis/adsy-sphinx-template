@@ -172,15 +172,15 @@
 	{}
 
 
-\RequirePackage{tabu}
+% Redefine tabulary for sphinx documents 
+\usepackage{tabu}
 
-\let\oldtabular\tabulary
-\let\endoldtabular\endtabulary
+% redefine the L column type
+\newcolumntype{L}{X[l]<{\strut}}
 
 \definecolor{tablehead}{rgb}{0.7294117647058823, 0.6823529411764706, 0.6235294117647059}
 
-\renewenvironment{tabulary}[2]{\bgroup\begin{tabu} to \textwidth{#2}
-	\rowcolor{tablehead}
-}%
-{\end{tabu}\egroup}
+\renewenvironment{tabulary}[3]
+ {\noindent\tabu to \textwidth{#2}\hline\rowcolor{tablehead}}
+ {\endtabu}
 
