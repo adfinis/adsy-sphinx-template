@@ -184,3 +184,11 @@
  {\noindent\tabu to \textwidth{#2}\hline\rowcolor{tablehead}}
  {\endtabu}
 
+
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][H]{%
+   \origfigure[H]%
+}{%
+   \endorigfigure
+}
