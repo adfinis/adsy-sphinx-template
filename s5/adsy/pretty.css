@@ -22,6 +22,7 @@ blockquote b i {font-style: italic;}
 kbd {font-weight: bold; font-size: 1em;}
 sup {font-size: smaller; line-height: 1px;}
 
+p {font-size: 0.85em;}
 .tiny {font-size: 0.3em;}
 .small {font-size: 0.6em;}
 .normal {font-size: 1em;}
@@ -34,7 +35,7 @@ code.old {color: silver;}
 pre {padding: 0; margin: 0.25em 0 0.5em 0.5em; color: #533; font-size: 90%;}
 pre code {display: block;}
 ul {margin-right: 7%; margin-left: 50px; list-style: square;}
-li {margin-top: 0.75em; margin-right: 0;}
+li {margin-top: 0.75em; margin-right: 0; font-size: 0.85em;}
 ul ul {line-height: 1;}
 ul ul li {margin: .2em; font-size: 85%; list-style: square;}
 img.leader {display: block; margin: 0 auto;}
