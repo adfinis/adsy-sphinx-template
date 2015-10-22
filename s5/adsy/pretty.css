@@ -22,6 +22,12 @@ blockquote b i {font-style: italic;}
 kbd {font-weight: bold; font-size: 1em;}
 sup {font-size: smaller; line-height: 1px;}
 
+.tiny {font-size: 0.3em;}
+.small {font-size: 0.6em;}
+.normal {font-size: 1em;}
+.big {font-size: 1.3em;}
+.huge {font-size: 1.6em;}
+
 code {padding: 2px 0.25em; font-weight: bold; color: #533;}
 code.bad, code del {color: red;}
 code.old {color: silver;}
