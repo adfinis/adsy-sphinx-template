@@ -57,7 +57,7 @@ div.long {font-size: 0.75em;}
 .slide h3 {font-size: 130%;}
 h1 abbr {font-variant: small-caps;}
 
-div#controls {position: absolute; z-index: 5; left: 50%; top: 0;
+div#controls {position: absolute; z-index: 50; left: 50%; top: 0;
   width: 50%; height: 100%;
   text-align: right;}
 #footer>div#controls {position: fixed; bottom: 0; padding: 1em 0;
