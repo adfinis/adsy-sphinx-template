@@ -103,3 +103,9 @@ To enable the Ad-Sy HTML template, add the following to the `conf.py` file:
    # Add any paths that contain custom themes here, relative to this directory.
    html_theme_path = [ 'adsy-sphinx-template.src/html' ]
 
+   # Works with github and gitlab
+   html_context = {
+       'source_url_prefix':
+       "https://github.com/adfinis-sygroup/[project]/tree/master/doc/",
+       'source_suffix': ".rst",
+   }
