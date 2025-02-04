@@ -13,7 +13,7 @@ Maybe it makes sense to add an entrypoint which only adds the static files (or a
 
 Add this project as dependency to `pyproject.toml`:
 ```bash
-adfinis_sphinx_theme = { git = "https://github.com/adfinis/adfinis-sphinx-template.git", branch = "main" }
+adfinis_sphinx_theme = { git = "https://github.com/adfinis/adfinis-sphinx-theme.git", branch = "main" }
 ```
 
 Add the following to your sphinx `conf.py`:
@@ -21,11 +21,11 @@ Add the following to your sphinx `conf.py`:
 ```ini
 extensions = [
     # Add this to the extensions
-    'adfinis_sphinx_template',
+    'adfinis_sphinx_theme',
 ]
 ```
 
-The following variables will be automatically [set/overriden](adfinis_sphinx_theme/__init__.py) by the template:
+The following variables will be automatically [set/overriden](adfinis_sphinx_theme/__init__.py) by the theme:
 - `html_title`
 - `html_theme`
 - `html_logo` (This is not set but should be null, as the logo is inserted with CSS)
