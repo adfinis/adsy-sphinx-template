@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 extensions = [
-    'adfinis_sphinx_theme'
+    'adfinis-sphinx-theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

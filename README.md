@@ -13,7 +13,7 @@ Maybe it makes sense to add an entrypoint which only adds the static files (or a
 
 Add this project as dependency to `pyproject.toml`:
 ```bash
-adfinis_sphinx_theme = { git = "https://github.com/adfinis/adfinis-sphinx-theme.git", branch = "main" }
+adfinis-sphinx-theme = { git = "https://github.com/adfinis/adfinis-sphinx-theme.git", branch = "main" }
 ```
 
 Add the following to your sphinx `conf.py`:
