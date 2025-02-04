@@ -5,7 +5,7 @@ def config_inited(app, config):
     config['html_title'] = config['project']
     config['html_theme'] = 'sphinx_rtd_theme'
     config['html_static_path'].append(dir_path + '/static')
-    config['html_css_files'].append('css/adsy.css')
+    config['html_css_files'].append('css/adfinis.css')
     # The logo is inserted via CSS
     #config['html_logo'] = dir_path + '/logo.png'
 
