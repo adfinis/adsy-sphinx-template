@@ -4,6 +4,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 def config_inited(app, config):
     config['html_title'] = config['project']
     config['html_theme'] = 'sphinx_rtd_theme'
+    config['pygments_style'] = 'sphinx'
     config['html_static_path'].append(dir_path + '/static')
     config['html_css_files'].append('css/adfinis.css')
     # The logo is inserted via CSS

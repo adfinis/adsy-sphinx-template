@@ -76,3 +76,8 @@ a:hover {
 .wy-nav-content {
   max-width: none;
 }
+
+/* the default sphinx yellow bg doesn't work here */
+.highlight {
+  background: #fff;
+}

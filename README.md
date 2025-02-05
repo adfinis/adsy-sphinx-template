@@ -28,6 +28,7 @@ extensions = [
 The following variables will be automatically [set/overriden](adfinis_sphinx_theme/__init__.py) by the theme:
 - `html_title`
 - `html_theme`
+- `pygments_style`
 - `html_logo` (This is not set but should be null, as the logo is inserted with CSS)
 
 ## Demo
